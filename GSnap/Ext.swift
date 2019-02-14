@@ -19,6 +19,39 @@ extension UIViewController {
         self.present(alert, animated: true)
     }
     
+    // ローディングを表示します.
+    func showProgress() {
+        
+        // ローディングを作成します.
+        let indicator = UIActivityIndicatorView()
+        
+        // サイズを指定します.
+        indicator.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        
+        // 表示位置は画面中央とします.
+        indicator.center = self.view.center
+        
+        // tag番号を指定します（ローディングを消す際に利用します、適当な値でOK）.
+        indicator.tag = 123
+        
+        // 表示します.
+        self.view.addSubview(indicator)
+        
+        // アニメーションを開始します.
+        indicator.startAnimating()
+    }
+    
+    // ローディングを削除します.
+    func hideProgress() {
+        
+        // tag をキーにローディングのビューを取得します.
+        if let indicator = self.view.viewWithTag(123) {
+            
+            // ビューから削除します.
+            indicator.removeFromSuperview()
+        }
+    }
+    
 }
 
 // UIImageViewの拡張.

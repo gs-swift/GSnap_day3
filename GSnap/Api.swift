@@ -130,4 +130,63 @@ class Api {
             
         }
     }
+    
+    // 投稿API.
+    static func post(image: UIImage, text: String, callback: @escaping((String?) -> Void)) {
+        
+        // APIトークンがない場合はエラー.
+        guard let apiToken = UserDefaults.standard.string(forKey: "apiToken") else {
+            callback("ログインが必要です")
+            return
+        }
+        
+        // 送信先URLを作成します.
+        let url = apiRoot + "/api/posts?api_token=" + apiToken
+                
+        // MultipartFormData を作成して、サーバーに投げる.
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+            
+            // 送信データ（本文）.
+            multipartFormData.append(text.data(using: .utf8, allowLossyConversion: true)!, withName: "body")
+            
+            // 送信データ（投稿画像）.
+            let jpeg = image.jpegData(compressionQuality: 0.8)!
+            multipartFormData.append(jpeg, withName: "file", fileName: "image.jpg", mimeType: "image/jpg")
+            
+        }, to: url) { multipartFormDataEncodingResult in
+            
+            switch multipartFormDataEncodingResult {
+                
+            // 失敗した場合.
+            case let .failure(error):
+                print(error.localizedDescription)
+                callback("処理途中でエラーが発生しました")
+            
+            // 成功した場合.
+            case let .success(uploadRequest, _, _):
+                
+                // サーバーからのレスポンス結果を受け取る.
+                uploadRequest.responseJSON(completionHandler: { dataResponse in
+                    
+                    // ネットワーク圏外など.
+                    if dataResponse.result.isFailure {
+                        print(dataResponse.error ?? "")
+                        callback("エラーが発生しました。")
+                        return
+                    }
+                    
+                    // ステータスコードが 201 でない場合、エラー.
+                    if dataResponse.response?.statusCode != 201 {
+                        print(dataResponse.result.value ?? "")
+                        callback("サーバーでエラーが発生しました")
+                    }
+                    
+                    // 成功.
+                    callback(nil)
+                })
+            }
+            
+        }
+        
+    }
 }
