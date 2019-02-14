@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E3CDAD522150E47003B8B57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CDAD422150E47003B8B57 /* AppDelegate.swift */; };
+		1E3CDADC22150E48003B8B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E3CDADB22150E48003B8B57 /* Assets.xcassets */; };
+		1E3CDADF22150E48003B8B57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E3CDADD22150E48003B8B57 /* LaunchScreen.storyboard */; };
+		1E3CDAE722150F72003B8B57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CDAE622150F72003B8B57 /* LoginViewController.swift */; };
+		1E3CDAE922150F8F003B8B57 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CDAE822150F8F003B8B57 /* TimelineViewController.swift */; };
+		1E3CDAEB22150F9F003B8B57 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E3CDAEA22150F9F003B8B57 /* Login.storyboard */; };
+		1E3CDAED22150FEC003B8B57 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CDAEC22150FEC003B8B57 /* Api.swift */; };
+		1E3CDAEF22150FF4003B8B57 /* Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CDAEE22150FF3003B8B57 /* Ext.swift */; };
+		1E3CDAF122150FFF003B8B57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E3CDAF022150FFF003B8B57 /* Main.storyboard */; };
+		1E3CDAF32215100A003B8B57 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CDAF22215100A003B8B57 /* User.swift */; };
+		1E3CDAF522151020003B8B57 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CDAF42215101F003B8B57 /* Post.swift */; };
+		E88326574913E5A13331699B /* Pods_GSnap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2C3C734C55F5E6DEB16581 /* Pods_GSnap.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E3CDAD122150E47003B8B57 /* GSnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E3CDAD422150E47003B8B57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E3CDADB22150E48003B8B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E3CDADE22150E48003B8B57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E3CDAE022150E48003B8B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E3CDAE622150F72003B8B57 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1E3CDAE822150F8F003B8B57 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		1E3CDAEA22150F9F003B8B57 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		1E3CDAEC22150FEC003B8B57 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		1E3CDAEE22150FF3003B8B57 /* Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext.swift; sourceTree = "<group>"; };
+		1E3CDAF022150FFF003B8B57 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1E3CDAF22215100A003B8B57 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1E3CDAF42215101F003B8B57 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		6F2C3C734C55F5E6DEB16581 /* Pods_GSnap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GSnap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A9BA463BFF6D4B28C9B2B30 /* Pods-GSnap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSnap.release.xcconfig"; path = "Target Support Files/Pods-GSnap/Pods-GSnap.release.xcconfig"; sourceTree = "<group>"; };
+		ECACDB20B8BD50753773ADE6 /* Pods-GSnap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSnap.debug.xcconfig"; path = "Target Support Files/Pods-GSnap/Pods-GSnap.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E3CDACE22150E47003B8B57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E88326574913E5A13331699B /* Pods_GSnap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E3CDAC822150E47003B8B57 = {
+			isa = PBXGroup;
+			children = (
+				1E3CDAD322150E47003B8B57 /* GSnap */,
+				1E3CDAD222150E47003B8B57 /* Products */,
+				9C69C723D57F627E63D455DE /* Pods */,
+				A5ECED28D3050066C5BE7DBA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1E3CDAD222150E47003B8B57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E3CDAD122150E47003B8B57 /* GSnap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E3CDAD322150E47003B8B57 /* GSnap */ = {
+			isa = PBXGroup;
+			children = (
+				1E3CDAF42215101F003B8B57 /* Post.swift */,
+				1E3CDAF22215100A003B8B57 /* User.swift */,
+				1E3CDAF022150FFF003B8B57 /* Main.storyboard */,
+				1E3CDAEE22150FF3003B8B57 /* Ext.swift */,
+				1E3CDAEC22150FEC003B8B57 /* Api.swift */,
+				1E3CDAEA22150F9F003B8B57 /* Login.storyboard */,
+				1E3CDAE822150F8F003B8B57 /* TimelineViewController.swift */,
+				1E3CDAE622150F72003B8B57 /* LoginViewController.swift */,
+				1E3CDAD422150E47003B8B57 /* AppDelegate.swift */,
+				1E3CDADB22150E48003B8B57 /* Assets.xcassets */,
+				1E3CDADD22150E48003B8B57 /* LaunchScreen.storyboard */,
+				1E3CDAE022150E48003B8B57 /* Info.plist */,
+			);
+			path = GSnap;
+			sourceTree = "<group>";
+		};
+		9C69C723D57F627E63D455DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECACDB20B8BD50753773ADE6 /* Pods-GSnap.debug.xcconfig */,
+				9A9BA463BFF6D4B28C9B2B30 /* Pods-GSnap.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A5ECED28D3050066C5BE7DBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F2C3C734C55F5E6DEB16581 /* Pods_GSnap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E3CDAD022150E47003B8B57 /* GSnap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E3CDAE322150E48003B8B57 /* Build configuration list for PBXNativeTarget "GSnap" */;
+			buildPhases = (
+				1BB28DBF3169CDE0DF5402B5 /* [CP] Check Pods Manifest.lock */,
+				1E3CDACD22150E47003B8B57 /* Sources */,
+				1E3CDACE22150E47003B8B57 /* Frameworks */,
+				1E3CDACF22150E47003B8B57 /* Resources */,
+				11582CCD5F1EF33631568934 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GSnap;
+			productName = GSnap;
+			productReference = 1E3CDAD122150E47003B8B57 /* GSnap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E3CDAC922150E47003B8B57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Munesada Yohei";
+				TargetAttributes = {
+					1E3CDAD022150E47003B8B57 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 1E3CDACC22150E47003B8B57 /* Build configuration list for PBXProject "GSnap" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E3CDAC822150E47003B8B57;
+			productRefGroup = 1E3CDAD222150E47003B8B57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E3CDAD022150E47003B8B57 /* GSnap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E3CDACF22150E47003B8B57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E3CDAEB22150F9F003B8B57 /* Login.storyboard in Resources */,
+				1E3CDAF122150FFF003B8B57 /* Main.storyboard in Resources */,
+				1E3CDADF22150E48003B8B57 /* LaunchScreen.storyboard in Resources */,
+				1E3CDADC22150E48003B8B57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11582CCD5F1EF33631568934 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GSnap/Pods-GSnap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GSnap/Pods-GSnap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BB28DBF3169CDE0DF5402B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GSnap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E3CDACD22150E47003B8B57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E3CDAE722150F72003B8B57 /* LoginViewController.swift in Sources */,
+				1E3CDAD522150E47003B8B57 /* AppDelegate.swift in Sources */,
+				1E3CDAF32215100A003B8B57 /* User.swift in Sources */,
+				1E3CDAED22150FEC003B8B57 /* Api.swift in Sources */,
+				1E3CDAE922150F8F003B8B57 /* TimelineViewController.swift in Sources */,
+				1E3CDAF522151020003B8B57 /* Post.swift in Sources */,
+				1E3CDAEF22150FF4003B8B57 /* Ext.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1E3CDADD22150E48003B8B57 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E3CDADE22150E48003B8B57 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E3CDAE122150E48003B8B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E3CDAE222150E48003B8B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E3CDAE422150E48003B8B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECACDB20B8BD50753773ADE6 /* Pods-GSnap.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4T8AA29M65;
+				INFOPLIST_FILE = GSnap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.yoheim.www.GSnap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1E3CDAE522150E48003B8B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A9BA463BFF6D4B28C9B2B30 /* Pods-GSnap.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4T8AA29M65;
+				INFOPLIST_FILE = GSnap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.yoheim.www.GSnap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E3CDACC22150E47003B8B57 /* Build configuration list for PBXProject "GSnap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E3CDAE122150E48003B8B57 /* Debug */,
+				1E3CDAE222150E48003B8B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E3CDAE322150E48003B8B57 /* Build configuration list for PBXNativeTarget "GSnap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E3CDAE422150E48003B8B57 /* Debug */,
+				1E3CDAE522150E48003B8B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E3CDAC922150E47003B8B57 /* Project object */;
+}
