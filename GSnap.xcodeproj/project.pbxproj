@@ -73,20 +73,36 @@
 		1E3CDAD322150E47003B8B57 /* GSnap */ = {
 			isa = PBXGroup;
 			children = (
-				1E3CDAF42215101F003B8B57 /* Post.swift */,
-				1E3CDAF22215100A003B8B57 /* User.swift */,
-				1E3CDAF022150FFF003B8B57 /* Main.storyboard */,
+				1E3CDAF72215124E003B8B57 /* viewControllers */,
+				1E3CDAF62215123C003B8B57 /* models */,
 				1E3CDAEE22150FF3003B8B57 /* Ext.swift */,
 				1E3CDAEC22150FEC003B8B57 /* Api.swift */,
-				1E3CDAEA22150F9F003B8B57 /* Login.storyboard */,
-				1E3CDAE822150F8F003B8B57 /* TimelineViewController.swift */,
-				1E3CDAE622150F72003B8B57 /* LoginViewController.swift */,
 				1E3CDAD422150E47003B8B57 /* AppDelegate.swift */,
 				1E3CDADB22150E48003B8B57 /* Assets.xcassets */,
-				1E3CDADD22150E48003B8B57 /* LaunchScreen.storyboard */,
 				1E3CDAE022150E48003B8B57 /* Info.plist */,
+				1E3CDAEA22150F9F003B8B57 /* Login.storyboard */,
+				1E3CDAF022150FFF003B8B57 /* Main.storyboard */,
+				1E3CDADD22150E48003B8B57 /* LaunchScreen.storyboard */,
 			);
 			path = GSnap;
+			sourceTree = "<group>";
+		};
+		1E3CDAF62215123C003B8B57 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				1E3CDAF42215101F003B8B57 /* Post.swift */,
+				1E3CDAF22215100A003B8B57 /* User.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		1E3CDAF72215124E003B8B57 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E3CDAE822150F8F003B8B57 /* TimelineViewController.swift */,
+				1E3CDAE622150F72003B8B57 /* LoginViewController.swift */,
+			);
+			path = viewControllers;
 			sourceTree = "<group>";
 		};
 		9C69C723D57F627E63D455DE /* Pods */ = {
