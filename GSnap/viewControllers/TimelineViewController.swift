@@ -17,6 +17,9 @@ class TimelineViewController : UITableViewController {
     
     override func viewDidLoad() {
         self.title = "タイムライン"
+        
+        // カスタム TableCell を使えるように登録する.
+        self.tableView.register(UINib(nibName: "TimelineCell", bundle: nil), forCellReuseIdentifier: "TimelineCell")
     }
     
     // ViewController が表示される時.
@@ -54,8 +57,13 @@ extension TimelineViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell()
-        cell.textLabel?.text = posts[indexPath.row].body
+        // Cellを取得する.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineCell", for: indexPath) as! TimelineCell
+        
+        // 投稿データを設定する（設定したらCell内で表示設定が行われる）.
+        cell.post = self.posts[indexPath.row]
+        
+        // 返却する.
         return cell
     }
 }

@@ -20,3 +20,36 @@ extension UIViewController {
     }
     
 }
+
+// UIImageViewの拡張.
+extension UIImageView {
+    
+    // 指定URLから画像をダウンロードして、表示します（ダウンロード先を文字列で指定）.
+    func downloadedFrom(path: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        
+        // http:// から始まるフルパスにする.
+        let urlString = apiRoot + path
+        
+        guard let url = URL(string: urlString) else { return }
+        downloadedFrom(url: url, contentMode: mode)
+    }
+
+    // 指定URLから画像をダウンロードして、表示します.
+    func downloadedFrom(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        // ダウンロード先にリクエストを発行します.
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            // 正しくHTTP通信ができたことを確認します.
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() {
+                // メインスレッドで、表示する画像の更新を行います.
+                self.image = image
+            }
+            }.resume()
+    }
+}
