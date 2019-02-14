@@ -161,6 +161,69 @@
             </objects>
             <point key="canvasLocation" x="-66" y="766"/>
         </scene>
+        <!--マイページ-->
+        <scene sceneID="Syt-Ce-oZg">
+            <objects>
+                <navigationController id="yv9-mE-KZI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="マイページ" image="icon-mypage" id="Aot-ZZ-fKC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tfx-ww-YkO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="p2R-qg-yq7" kind="relationship" relationship="rootViewController" id="87a-Mt-VXJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qeg-lc-erv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-899" y="1492"/>
+        </scene>
+        <!--My Page View Controller-->
+        <scene sceneID="UUx-w8-HyV">
+            <objects>
+                <collectionViewController id="p2R-qg-yq7" customClass="MyPageViewController" customModule="GSnap" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3o4-z4-uEc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Hjl-gp-GMT">
+                            <size key="itemSize" width="119" height="118"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="eEw-To-Um8">
+                                <rect key="frame" x="0.0" y="0.0" width="119" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="119" height="118"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nSL-JF-Oxy">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="118"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="nSL-JF-Oxy" firstAttribute="leading" secondItem="eEw-To-Um8" secondAttribute="leading" id="5JC-4z-pMP"/>
+                                    <constraint firstItem="nSL-JF-Oxy" firstAttribute="top" secondItem="eEw-To-Um8" secondAttribute="top" id="FlU-UJ-6XB"/>
+                                    <constraint firstAttribute="bottom" secondItem="nSL-JF-Oxy" secondAttribute="bottom" id="KVE-po-wc1"/>
+                                    <constraint firstAttribute="trailing" secondItem="nSL-JF-Oxy" secondAttribute="trailing" id="Xjz-BW-R1U"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="p2R-qg-yq7" id="wJs-hv-vju"/>
+                            <outlet property="delegate" destination="p2R-qg-yq7" id="Bq6-2L-Vi6"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="ZWP-CZ-uQW"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nqx-B6-X6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66.400000000000006" y="1491.9040479760122"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="o8L-O2-aI1">
             <objects>
@@ -173,6 +236,7 @@
                     <connections>
                         <segue destination="LI2-TO-ge9" kind="relationship" relationship="viewControllers" id="s3e-3A-Jyv"/>
                         <segue destination="Rfo-Pw-2J2" kind="relationship" relationship="viewControllers" id="PRY-Zq-i90"/>
+                        <segue destination="yv9-mE-KZI" kind="relationship" relationship="viewControllers" id="jPV-AS-Iia"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niJ-He-uN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,6 +246,7 @@
     </scenes>
     <resources>
         <image name="icon-camera" width="25" height="25"/>
+        <image name="icon-mypage" width="25" height="25"/>
         <image name="icon-timeline" width="25" height="25"/>
         <image name="noImage" width="400" height="400"/>
     </resources>
