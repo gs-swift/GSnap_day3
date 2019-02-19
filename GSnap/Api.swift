@@ -189,4 +189,79 @@ class Api {
         }
         
     }
+    
+    // いいねを追加.
+    static func addLike(postId: Int, callback: @escaping (String?) -> Void) {
+        print("addLike")
+        
+        // APIトークンを取得.
+        guard let apiToken = UserDefaults.standard.string(forKey: "apiToken") else {
+            callback("ログインが必要です")
+            return
+        }
+
+        // URLを作成.
+        let url = "\(apiRoot)/api/posts/\(postId)/likes?api_token=\(apiToken)"
+        
+        // リクエスト作成.
+        let request = Alamofire.request(url, method: .post)
+        
+        // API実行.
+        request.responseJSON { dataResponse in
+            
+            // ネットワーク圏外など.
+            if dataResponse.result.isFailure {
+                print(dataResponse.error ?? "")
+                callback("エラーが発生しました。")
+                return
+            }
+            
+            // ステータスコードが 201 でない場合、エラー.
+            if dataResponse.response?.statusCode != 201 {
+                print(dataResponse.result.value ?? "")
+                callback("サーバーでエラーが発生しました")
+            }
+            
+            // 成功.
+            callback(nil)
+        }
+    }
+    
+    // いいねを削除.
+    static func removeLike(postId: Int, callback: @escaping (String?) -> Void) {
+        print("removeLike")
+        
+        // APIトークンを取得.
+        guard let apiToken = UserDefaults.standard.string(forKey: "apiToken") else {
+            callback("ログインが必要です")
+            return
+        }
+
+        // URLを作成.
+        let url = "\(apiRoot)/api/posts/\(postId)/likes?api_token=\(apiToken)"
+        
+        // リクエストを作成.
+        let request = Alamofire.request(url, method: .delete)
+        
+        // APIを実行.
+        request.responseJSON { dataResponse in
+            
+            // ネットワーク圏外など.
+            if dataResponse.result.isFailure {
+                print(dataResponse.error ?? "")
+                callback("エラーが発生しました。")
+                return
+            }
+            
+            // ステータスコードが 200 でない場合、エラー.
+            if dataResponse.response?.statusCode != 200 {
+                print(dataResponse.result.value ?? "")
+                callback("サーバーでエラーが発生しました")
+            }
+            
+            // 成功.
+            callback(nil)
+        }
+    }
+
 }

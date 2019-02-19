@@ -63,6 +63,24 @@ extension TimelineViewController {
         // 投稿データを設定する（設定したらCell内で表示設定が行われる）.
         cell.post = self.posts[indexPath.row]
         
+        // いいねがタップされた時.
+        cell.likeCallback = { post in
+            // 変更後のいいね状態を見て、APIを呼び分ける.
+            if post.liked {
+                Api.addLike(postId: post.id, callback: { errorMessage in
+                    if let errorMessage = errorMessage {
+                        self.showAlert(message: errorMessage)
+                    }
+                })
+            } else {
+                Api.removeLike(postId: post.id, callback: { errorMessage in
+                    if let errorMessage = errorMessage {
+                        self.showAlert(message: errorMessage)
+                    }
+                })
+            }
+        }
+        
         // 返却する.
         return cell
     }

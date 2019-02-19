@@ -43,8 +43,20 @@
                             <constraint firstAttribute="width" secondItem="WUG-6f-PTz" secondAttribute="height" multiplier="1:1" id="66l-6U-yCz"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxC-PH-my9">
+                        <rect key="frame" x="260" y="361" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="Zgg-6i-5XS"/>
+                            <constraint firstAttribute="width" constant="44" id="zC1-ej-jAj"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="like"/>
+                        <connections>
+                            <action selector="onTapLike:" destination="mU7-5F-D5w" eventType="touchUpInside" id="pTx-Vh-uKo"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="FxC-PH-my9" firstAttribute="bottom" secondItem="WUG-6f-PTz" secondAttribute="bottom" constant="-10" id="0Dl-za-bDG"/>
                     <constraint firstItem="I7H-bK-cuW" firstAttribute="leading" secondItem="YeD-Bf-osD" secondAttribute="trailing" constant="10" id="4TB-2g-l8o"/>
                     <constraint firstAttribute="trailingMargin" secondItem="KoV-8J-oKK" secondAttribute="trailing" constant="10" id="8OL-n5-2Ti"/>
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="KoV-8J-oKK" secondAttribute="bottom" constant="10" id="9GV-H9-VlZ"/>
@@ -57,16 +69,21 @@
                     <constraint firstItem="WUG-6f-PTz" firstAttribute="centerX" secondItem="icE-R2-gqk" secondAttribute="centerX" id="X5Z-ix-igq"/>
                     <constraint firstItem="WUG-6f-PTz" firstAttribute="leading" secondItem="icE-R2-gqk" secondAttribute="leading" id="m5h-eN-ORe"/>
                     <constraint firstItem="KoV-8J-oKK" firstAttribute="top" secondItem="WUG-6f-PTz" secondAttribute="bottom" constant="10" id="o8g-eU-5Ga"/>
+                    <constraint firstItem="FxC-PH-my9" firstAttribute="trailing" secondItem="WUG-6f-PTz" secondAttribute="trailing" constant="-10" id="oPB-T6-kcH"/>
                     <constraint firstItem="YeD-Bf-osD" firstAttribute="leading" secondItem="icE-R2-gqk" secondAttribute="leadingMargin" id="rYJ-oa-eYM"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="avatarImageView" destination="YeD-Bf-osD" id="Fnf-JM-sHq"/>
                 <outlet property="bodyLabel" destination="KoV-8J-oKK" id="mhn-9V-Hym"/>
+                <outlet property="likeButton" destination="FxC-PH-my9" id="GfI-bA-I6z"/>
                 <outlet property="photoImageView" destination="WUG-6f-PTz" id="0Rq-C4-5ca"/>
                 <outlet property="userNameLabel" destination="I7H-bK-cuW" id="0BI-7m-czZ"/>
             </connections>
             <point key="canvasLocation" x="140.80000000000001" y="120.98950524737631"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="like" width="512" height="512"/>
+    </resources>
 </document>
