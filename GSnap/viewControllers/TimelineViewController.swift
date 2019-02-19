@@ -47,6 +47,17 @@ class TimelineViewController : UITableViewController {
             }
         }
     }
+    
+    // 画面遷移する時.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // コメント画面へ遷移する時.
+        if let vc = segue.destination as? CommentViewController {
+            if let post = sender as? Post {
+                vc.post = post
+            }
+        }
+    }
 }
 
 extension TimelineViewController {
@@ -83,5 +94,18 @@ extension TimelineViewController {
         
         // 返却する.
         return cell
+    }
+    
+    // 行がタップされた時に呼び出される.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // 選択を状態を解除する.
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // 対象の投稿を取り出す.
+        let post = self.posts[indexPath.row]
+        
+        // コメント画面へ遷移.
+        self.performSegue(withIdentifier: "show", sender: post)
     }
 }

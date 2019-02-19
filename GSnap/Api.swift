@@ -263,5 +263,93 @@ class Api {
             callback(nil)
         }
     }
+    
+    
+    // コメントを取得.
+    static func getComments(postId: Int, callback: @escaping (String?, [Comment]?) -> Void) {
+        
+        // APIトークンを取得.
+        guard let apiToken = UserDefaults.standard.string(forKey: "apiToken") else {
+            callback("ログインが必要です", nil)
+            return
+        }
+
+        // URL を作成.
+        let url = apiRoot + "/api/posts/\(postId)/comments?api_token=" + apiToken
+        
+        // API呼び出し.
+        Alamofire.request(url).responseData { dataResponse in
+            
+            // ネットワーク圏外など.
+            if dataResponse.result.isFailure {
+                print(dataResponse.error ?? "")
+                callback("エラーが発生しました。", nil)
+                return
+            }
+            
+            // ステータスコードが 200 でない場合、エラー.
+            if dataResponse.response?.statusCode != 200 {
+                print(dataResponse.result.value ?? "")
+                callback("サーバーでエラーが発生しました", nil)
+                return
+            }
+
+            // 成功した場合、サーバーからのレスポンスを受け取る.
+            guard let data = dataResponse.result.value else {
+                return
+            }
+            // Commentの配列に変換して、返却する.
+            do {
+                let comments = try JSONDecoder().decode([Comment].self, from: data)
+                callback(nil, comments)
+                
+            } catch {
+                // 変換でエラーが発生した時.
+                print(error.localizedDescription)
+                callback("エラーが発生しました", nil)
+            }
+        }
+    }
+    
+    // コメントを追加.
+    static func addComment(postId: Int, comment: String, callback: @escaping ((String?) -> Void)) {
+        
+        // APIトークンを取得.
+        guard let apiToken = UserDefaults.standard.string(forKey: "apiToken") else {
+            callback("ログインが必要です")
+            return
+        }
+
+        // URL作成.
+        let url = apiRoot + "/api/posts/\(postId)/comments?api_token=" + apiToken
+        
+        let params: [String: Any] = [
+            "comment" : comment
+        ]
+        
+        // リクエスト作成.
+        let request = Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default)
+            
+        // API実行
+        request.responseJSON { dataResponse in
+            
+            // ネットワーク圏外など.
+            if dataResponse.result.isFailure {
+                print(dataResponse.error ?? "")
+                callback("エラーが発生しました。")
+                return
+            }
+            
+            // ステータスコードが 201 でない場合、エラー.
+            if dataResponse.response?.statusCode != 201 {
+                print(dataResponse.result.value ?? "")
+                callback("サーバーでエラーが発生しました")
+                return
+            }
+            
+            // 成功.
+            callback(nil)
+        }
+    }
 
 }

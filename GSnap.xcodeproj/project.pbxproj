@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E171F18221BE6BF00D375F0 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E171F17221BE6BF00D375F0 /* CommentViewController.swift */; };
+		1E171F1A221BE74300D375F0 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E171F19221BE74300D375F0 /* Comment.swift */; };
 		1E3CDAD522150E47003B8B57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CDAD422150E47003B8B57 /* AppDelegate.swift */; };
 		1E3CDADC22150E48003B8B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E3CDADB22150E48003B8B57 /* Assets.xcassets */; };
 		1E3CDADF22150E48003B8B57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E3CDADD22150E48003B8B57 /* LaunchScreen.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E171F17221BE6BF00D375F0 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		1E171F19221BE74300D375F0 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		1E3CDAD122150E47003B8B57 /* GSnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E3CDAD422150E47003B8B57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E3CDADB22150E48003B8B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			children = (
 				1E3CDAF42215101F003B8B57 /* Post.swift */,
 				1E3CDAF22215100A003B8B57 /* User.swift */,
+				1E171F19221BE74300D375F0 /* Comment.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 				1E3CDAE622150F72003B8B57 /* LoginViewController.swift */,
 				1E3CDAFC22151C41003B8B57 /* PostViewController.swift */,
 				1E3CDAFE22153BC1003B8B57 /* MyPageViewController.swift */,
+				1E171F17221BE6BF00D375F0 /* CommentViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -263,9 +269,11 @@
 				1E3CDAED22150FEC003B8B57 /* Api.swift in Sources */,
 				1E3CDAFF22153BC1003B8B57 /* MyPageViewController.swift in Sources */,
 				1E3CDAF922151331003B8B57 /* TimelineCell.swift in Sources */,
+				1E171F1A221BE74300D375F0 /* Comment.swift in Sources */,
 				1E3CDAE922150F8F003B8B57 /* TimelineViewController.swift in Sources */,
 				1E3CDAF522151020003B8B57 /* Post.swift in Sources */,
 				1E3CDAEF22150FF4003B8B57 /* Ext.swift in Sources */,
+				1E171F18221BE6BF00D375F0 /* CommentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
