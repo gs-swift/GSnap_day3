@@ -17,7 +17,7 @@ class PostViewController : UIViewController {
     override func viewDidLoad() {
         
         // タイトルを指定.
-        self.title = "投稿しよう"
+        self.title = "投稿"
         
         // textView の Delegate 設定.
         self.textView.delegate = self        

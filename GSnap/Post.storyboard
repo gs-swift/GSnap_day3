@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AZh-JE-pVB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--投稿-->
+        <scene sceneID="2ee-lr-fVJ">
+            <objects>
+                <navigationController id="AZh-JE-pVB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="投稿" image="icon-camera" id="SqF-Je-wyi"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TKV-Xr-Cvg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rVd-qP-3ld" kind="relationship" relationship="rootViewController" id="8KE-RR-wfi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQ5-nh-0hl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-908" y="766"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="uOa-gZ-054">
+            <objects>
+                <viewController id="rVd-qP-3ld" customClass="PostViewController" customModule="GSnap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zaY-vJ-VB8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メッセージを入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1V-Qv-zG8">
+                                <rect key="frame" x="20" y="104" width="115" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="写真を選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VyI-4P-Tlg">
+                                <rect key="frame" x="20" y="261" width="72" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ここをタップしてメッセージを書こう！" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iC2-YZ-DOW">
+                                <rect key="frame" x="20" y="141" width="335" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="QSJ-0O-RIW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="a8m-qE-u8I">
+                                <rect key="frame" x="100" y="293" width="175" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="a8m-qE-u8I" secondAttribute="height" multiplier="1:1" id="T45-Hh-37m"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpI-Cn-FhF">
+                                <rect key="frame" x="32.5" y="488" width="123" height="30"/>
+                                <state key="normal" title="カメラを起動する"/>
+                                <connections>
+                                    <action selector="onTapCamera:" destination="rVd-qP-3ld" eventType="touchUpInside" id="ApP-Vf-naO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wN-M3-8Xa">
+                                <rect key="frame" x="243" y="488" width="77" height="30"/>
+                                <state key="normal" title="写真を選ぶ"/>
+                                <connections>
+                                    <action selector="onTapPhoto:" destination="rVd-qP-3ld" eventType="touchUpInside" id="mxA-Rr-f69"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzS-tt-zbq">
+                                <rect key="frame" x="156.5" y="597" width="62" height="30"/>
+                                <state key="normal" title="投稿する"/>
+                                <connections>
+                                    <action selector="onTapPost:" destination="rVd-qP-3ld" eventType="touchUpInside" id="sRe-Ff-ahw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a8m-qE-u8I" firstAttribute="leading" secondItem="gze-x6-Mws" secondAttribute="leading" constant="100" id="0lL-rE-8wV"/>
+                            <constraint firstItem="VyI-4P-Tlg" firstAttribute="leading" secondItem="gze-x6-Mws" secondAttribute="leading" constant="20" id="Gmh-On-1bn"/>
+                            <constraint firstItem="VyI-4P-Tlg" firstAttribute="top" secondItem="iC2-YZ-DOW" secondAttribute="bottom" constant="40" id="Is9-4F-bEn"/>
+                            <constraint firstItem="1wN-M3-8Xa" firstAttribute="top" secondItem="a8m-qE-u8I" secondAttribute="bottom" constant="20" id="LDL-gu-WZC"/>
+                            <constraint firstItem="j1V-Qv-zG8" firstAttribute="top" secondItem="gze-x6-Mws" secondAttribute="top" constant="40" id="NKw-hC-Ukf"/>
+                            <constraint firstItem="zpI-Cn-FhF" firstAttribute="top" secondItem="a8m-qE-u8I" secondAttribute="bottom" constant="20" id="PzE-eB-k5R"/>
+                            <constraint firstItem="gze-x6-Mws" firstAttribute="trailing" secondItem="a8m-qE-u8I" secondAttribute="trailing" constant="100" id="XcL-CJ-6NR"/>
+                            <constraint firstItem="iC2-YZ-DOW" firstAttribute="leading" secondItem="gze-x6-Mws" secondAttribute="leading" constant="20" id="cIl-I4-Gii"/>
+                            <constraint firstItem="gze-x6-Mws" firstAttribute="bottom" secondItem="LzS-tt-zbq" secondAttribute="bottom" constant="40" id="ebj-8K-YvK"/>
+                            <constraint firstItem="gze-x6-Mws" firstAttribute="trailing" secondItem="iC2-YZ-DOW" secondAttribute="trailing" constant="20" id="glE-1g-iOn"/>
+                            <constraint firstItem="zpI-Cn-FhF" firstAttribute="centerX" secondItem="gze-x6-Mws" secondAttribute="centerX" multiplier="0.5" id="jga-l6-Wbs"/>
+                            <constraint firstItem="j1V-Qv-zG8" firstAttribute="leading" secondItem="gze-x6-Mws" secondAttribute="leading" constant="20" id="lVY-3K-NoT"/>
+                            <constraint firstItem="LzS-tt-zbq" firstAttribute="centerX" secondItem="gze-x6-Mws" secondAttribute="centerX" id="mbi-er-NPn"/>
+                            <constraint firstItem="a8m-qE-u8I" firstAttribute="top" secondItem="VyI-4P-Tlg" secondAttribute="bottom" constant="15" id="nML-Mx-fyH"/>
+                            <constraint firstItem="1wN-M3-8Xa" firstAttribute="centerX" secondItem="gze-x6-Mws" secondAttribute="centerX" multiplier="1.5" id="us0-wg-7ai"/>
+                            <constraint firstItem="iC2-YZ-DOW" firstAttribute="top" secondItem="j1V-Qv-zG8" secondAttribute="bottom" constant="20" id="wTG-eG-hIC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gze-x6-Mws"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5W0-7Y-DWM"/>
+                    <connections>
+                        <outlet property="textView" destination="iC2-YZ-DOW" id="vp0-2K-frT"/>
+                        <outlet property="userImageView" destination="a8m-qE-u8I" id="lpK-yu-W1U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C6P-cS-NZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66" y="766"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-camera" width="25" height="25"/>
+        <image name="noImage" width="400" height="400"/>
+    </resources>
+</document>

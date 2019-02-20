@@ -24,6 +24,9 @@
 		1E3CDAFB2215135F003B8B57 /* TimelineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E3CDAFA2215135F003B8B57 /* TimelineCell.xib */; };
 		1E3CDAFD22151C41003B8B57 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CDAFC22151C41003B8B57 /* PostViewController.swift */; };
 		1E3CDAFF22153BC1003B8B57 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CDAFE22153BC1003B8B57 /* MyPageViewController.swift */; };
+		1EB87D67221D32D90078533C /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EB87D66221D32D90078533C /* Timeline.storyboard */; };
+		1EB87D69221D32F30078533C /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EB87D68221D32F30078533C /* Post.storyboard */; };
+		1EB87D6B221D33010078533C /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EB87D6A221D33010078533C /* MyPage.storyboard */; };
 		E88326574913E5A13331699B /* Pods_GSnap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2C3C734C55F5E6DEB16581 /* Pods_GSnap.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,9 @@
 		1E3CDAFA2215135F003B8B57 /* TimelineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineCell.xib; sourceTree = "<group>"; };
 		1E3CDAFC22151C41003B8B57 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		1E3CDAFE22153BC1003B8B57 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		1EB87D66221D32D90078533C /* Timeline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
+		1EB87D68221D32F30078533C /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
+		1EB87D6A221D33010078533C /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		6F2C3C734C55F5E6DEB16581 /* Pods_GSnap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GSnap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9BA463BFF6D4B28C9B2B30 /* Pods-GSnap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSnap.release.xcconfig"; path = "Target Support Files/Pods-GSnap/Pods-GSnap.release.xcconfig"; sourceTree = "<group>"; };
 		ECACDB20B8BD50753773ADE6 /* Pods-GSnap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSnap.debug.xcconfig"; path = "Target Support Files/Pods-GSnap/Pods-GSnap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +103,9 @@
 				1E3CDADD22150E48003B8B57 /* LaunchScreen.storyboard */,
 				1E3CDAF822151331003B8B57 /* TimelineCell.swift */,
 				1E3CDAFA2215135F003B8B57 /* TimelineCell.xib */,
+				1EB87D66221D32D90078533C /* Timeline.storyboard */,
+				1EB87D68221D32F30078533C /* Post.storyboard */,
+				1EB87D6A221D33010078533C /* MyPage.storyboard */,
 			);
 			path = GSnap;
 			sourceTree = "<group>";
@@ -201,9 +210,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E3CDAEB22150F9F003B8B57 /* Login.storyboard in Resources */,
+				1EB87D67221D32D90078533C /* Timeline.storyboard in Resources */,
 				1E3CDAF122150FFF003B8B57 /* Main.storyboard in Resources */,
+				1EB87D6B221D33010078533C /* MyPage.storyboard in Resources */,
 				1E3CDAFB2215135F003B8B57 /* TimelineCell.xib in Resources */,
 				1E3CDADF22150E48003B8B57 /* LaunchScreen.storyboard in Resources */,
+				1EB87D69221D32F30078533C /* Post.storyboard in Resources */,
 				1E3CDADC22150E48003B8B57 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

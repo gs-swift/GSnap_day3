@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CAN-cM-U3z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--マイページ-->
+        <scene sceneID="UHl-6y-JWM">
+            <objects>
+                <navigationController id="kzX-fx-VrS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="マイページ" image="icon-mypage" id="Chx-oe-EgI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s9x-Vp-hZn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="och-hN-hvq" kind="relationship" relationship="rootViewController" id="Ybh-nr-5lw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJI-np-3T6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-899" y="1492"/>
+        </scene>
+        <!--My Page View Controller-->
+        <scene sceneID="awS-qO-1Ze">
+            <objects>
+                <collectionViewController id="och-hN-hvq" customClass="MyPageViewController" customModule="GSnap" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qED-t9-OA8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Yca-3h-Kng">
+                            <size key="itemSize" width="119" height="118"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="S9I-mb-lCb">
+                                <rect key="frame" x="0.0" y="0.0" width="119" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="119" height="118"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hPY-zx-FUa">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="118"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hPY-zx-FUa" secondAttribute="trailing" id="EOB-hA-4Jf"/>
+                                    <constraint firstItem="hPY-zx-FUa" firstAttribute="top" secondItem="S9I-mb-lCb" secondAttribute="top" id="GrT-iz-q3B"/>
+                                    <constraint firstItem="hPY-zx-FUa" firstAttribute="leading" secondItem="S9I-mb-lCb" secondAttribute="leading" id="Vb5-P8-K73"/>
+                                    <constraint firstAttribute="bottom" secondItem="hPY-zx-FUa" secondAttribute="bottom" id="g1f-nh-Mp7"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="och-hN-hvq" id="nlq-qR-1df"/>
+                            <outlet property="delegate" destination="och-hN-hvq" id="e52-0n-xOV"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="qj0-vZ-Aq9"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D2o-DN-2FE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66.400000000000006" y="1491.9040479760122"/>
+        </scene>
+        <!--マイページ-->
+        <scene sceneID="XdN-MV-ro0">
+            <objects>
+                <navigationController id="CAN-cM-U3z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="マイページ" image="icon-mypage" id="kGo-eo-rdT"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="voN-8s-8PU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rrV-Jq-GFl" kind="relationship" relationship="rootViewController" id="F9a-44-cXb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QzB-fu-0eu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-899" y="1492"/>
+        </scene>
+        <!--My Page View Controller-->
+        <scene sceneID="QtU-GM-X4q">
+            <objects>
+                <collectionViewController id="rrV-Jq-GFl" customClass="MyPageViewController" customModule="GSnap" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="XOK-oA-Keg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="r0a-ZP-NpG">
+                            <size key="itemSize" width="119" height="118"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="SE5-34-CF7">
+                                <rect key="frame" x="0.0" y="0.0" width="119" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="119" height="118"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="517-NM-xP4">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="118"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="517-NM-xP4" firstAttribute="leading" secondItem="SE5-34-CF7" secondAttribute="leading" id="3lH-SP-ENn"/>
+                                    <constraint firstAttribute="bottom" secondItem="517-NM-xP4" secondAttribute="bottom" id="9yh-Qy-nuX"/>
+                                    <constraint firstItem="517-NM-xP4" firstAttribute="top" secondItem="SE5-34-CF7" secondAttribute="top" id="S6o-Ez-Ivk"/>
+                                    <constraint firstAttribute="trailing" secondItem="517-NM-xP4" secondAttribute="trailing" id="lKt-1Y-3wC"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="rrV-Jq-GFl" id="qCm-vc-TRL"/>
+                            <outlet property="delegate" destination="rrV-Jq-GFl" id="P4C-jm-TWN"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="yAe-Kb-3Fc"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yt9-QV-sha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66.400000000000006" y="1491.9040479760122"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-mypage" width="25" height="25"/>
+    </resources>
+</document>
